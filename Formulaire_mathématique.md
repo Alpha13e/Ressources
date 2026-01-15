@@ -42,7 +42,7 @@ $$
 
 <u>Propriétés d'association:</u>
 
-- $\displaystyle div(\overrightarrow{grad}(u))=\vec{\nabla}\cdot \vec{\nabla} u=\Delta u$
-- $\displaystyle \overrightarrow{rot}(\overrightarrow{grad}(u))=\vec{0}$
-- $\displaystyle div(\overrightarrow{rot}(a))=0$
-- $\displaystyle \overrightarrow{rot}\cdot \overrightarrow{rot}(a)=\overrightarrow{grad}(div(\vec{a}))-\Delta \vec{a}$
+- $div(\overrightarrow{grad}(u))=\vec{\nabla}\cdot \vec{\nabla} u=\Delta u$
+- $\overrightarrow{rot}(\overrightarrow{grad}(u))=\vec{0}$
+- $div(\overrightarrow{rot}(a))=0$
+- $\overrightarrow{rot}\cdot \overrightarrow{rot}(a)=\overrightarrow{grad}(div(\vec{a}))-\Delta \vec{a}$
