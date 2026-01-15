@@ -8,10 +8,13 @@
 <u>En base cartésienne:</u>
 
 - Distributivité vectorielle:
+
 $$
 \vec{u}\wedge(\vec v\wedge \vec{w})=(\vec{u}\cdot \vec{w})\vec{v}-(\vec{u}\cdot\vec{v})\vec{w}
 $$
+
 - Nabla: 
+
 $\displaystyle
 \vec \nabla=
 \begin{pmatrix}
@@ -20,11 +23,13 @@ $\displaystyle
     \frac{\partial}{\partial z}
 \end{pmatrix}
 $
+
 - **Gradient:** $\displaystyle \overrightarrow{grad}(u)=\vec{\nabla}u=\frac{\partial u}{\partial x}\vec{u_x}+\frac{\partial u}{\partial y}\vec{u_y}+\frac{\partial u}{\partial z}\vec{u_z}$
 
 - **Divergence:** $\displaystyle div(\vec{a})=\vec{\nabla}\cdot \vec{a}=\frac{\partial a_x}{\partial x}+\frac{\partial a_y}{\partial y}+\frac{\partial a_z}{\partial z}$
 
 - **Rotationnel:** 
+
 $\displaystyle \overrightarrow{rot}(\vec{a})=\vec{\nabla}\wedge\vec{a}=
 \begin{pmatrix}
     \partial y a_z-\partial za_y\\
