@@ -15,14 +15,14 @@ $$
 
 - Nabla: 
 
-$\displaystyle
+$$
 \vec \nabla=
 \begin{pmatrix}
     \frac{\partial}{\partial x}\\
     \frac{\partial}{\partial y}\\
     \frac{\partial}{\partial z}
 \end{pmatrix}
-$
+$$
 
 - **Gradient:** $\displaystyle \overrightarrow{grad}(u)=\vec{\nabla}u=\frac{\partial u}{\partial x}\vec{u_x}+\frac{\partial u}{\partial y}\vec{u_y}+\frac{\partial u}{\partial z}\vec{u_z}$
 
