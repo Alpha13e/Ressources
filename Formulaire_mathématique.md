@@ -30,13 +30,13 @@ $
 
 - **Rotationnel:** 
 
-$\displaystyle \overrightarrow{rot}(\vec{a})=\vec{\nabla}\wedge\vec{a}=
+$$ \overrightarrow{rot}(\vec{a})=\vec{\nabla}\wedge\vec{a}=
 \begin{pmatrix}
     \partial y a_z-\partial za_y\\
     \partial za_x-\partial xa_z\\
     \partial xa_y-\partial ya_x
 \end{pmatrix}
-$
+$$
 
 - **Laplacien:** $\displaystyle \Delta u=\vec{\nabla}\cdot \vec{\nabla}u= \frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}$
 
