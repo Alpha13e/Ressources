@@ -38,7 +38,7 @@ $$ \overrightarrow{rot}(\vec{a})=\vec{\nabla}\wedge\vec{a}=
 \end{pmatrix}
 $$
 
-- **Laplacien:** $\displaystyle \Delta u=\vec{\nabla}\cdot \vec{\nabla}u= \frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}$
+- **Laplacien:** $\displaystyle \Delta u=\vec{\nabla}\cdot \vec{\nabla}u= \frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}$ *Seul applicable sur un scalaire ou vecteur*
 
 <u>Propriétés d'association:</u>
 
