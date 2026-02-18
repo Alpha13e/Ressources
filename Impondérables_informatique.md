@@ -26,6 +26,25 @@ Git est très **complet**, et complexe, mais il est relativement **simple** de c
 
 Bravo, vous avez maintenant les bases pour utiliser Git seul ou peu nombreux, on a seulement effleuré la surface mais elle vous emmènera loin.
 
+<span style="color:green">
+
+<u>TL,DR:</u>
+
+- **Sauvegarde** les changements:
+- **Stage** (prépare à envoyer) les fichiers voulus ($+$)
+- Ecrire un **message** de description
+- **Commit & sync**
+
+<center>
+
+C'est par l'erreur qu'on apprend, surtout en informatique. 
+
+**Soyez curieux** !
+
+</center>
+
+</span>
+
 # Venvs
 
 # Raccourcis clavier
