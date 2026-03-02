@@ -1,8 +1,11 @@
 > Ce document contiendra à terme ce que j'estime nécessaire pour programmer confortablement. Cela restera élémentaire et possiblement inexact.
 
 # Markdown
-
+> Pour l'instant fourre-tout.
 ## Formules MathJax/Ketex
+
+[Ce fil stack exchange](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+contient le plus gros de Mathjax.
 
 # Environnement VsCode
 
