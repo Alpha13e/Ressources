@@ -2,11 +2,86 @@
 
 # Markdown
 > Pour l'instant fourre-tout.
+
+```markdown
+# Ceci est un titre
+## Et voilà un sous-titre degré 2
+### etc...
+On peut écrire du code pur `ainsi`, entre apostrophes inversées.
+
+Pour retourner à la ligne, il faut une ligne vide.
+
+|  ceci  |      est | un       | tableau    |
+| :----: | -------: | :------- | ---------- |
+| centré | à droite | à gauche | par défaut |
+
+On peut mettre en **gras**, en *italique*;
+
+- faire
+  - des
+    - listes
+      - de différents degrés
+
+1. ou numérotées
+1. dynamiques
+  1. échelonnées.
+
+[ceci est le nom d'un lien](avec_le-lien.jpeg "et une description facultative")
+```
+
+Voici le résultat compilé sans les titres:
+
+On peut écrire du code pur `ainsi`, entre apostrophes inversées.
+
+Pour retourner à la ligne, il faut une ligne vide.
+
+|  ceci  |      est | un       | tableau    |
+| :----: | -------: | :------- | ---------- |
+| centré | à droite | à gauche | par défaut |
+
+On peut mettre en **gras**, en *italique*;
+
+- faire
+  - des
+    - listes
+      - de différents degrés
+
+1. ou numérotées
+1. dynamiques
+  1. échelonnées. Oui j'ai écrit 3 1s !
+
+[ceci est le nom d'un lien](avec_le-lien.jpeg "et une description facultative (hover the mouse (; )")
+
+En fonction de l'environnement (sensible), on peut injecter des bornes html simples. La syntaxe est `<commande arguments> texte </commande>`. Il faut parfois les isoler par une ligne entière, et ils désactivent souvent la coloration syntaxique de l'éditeur.
+
+- <u>On peut souligner avec</u> `<u>`;
+
+<center>
+
+Centrer avec `<center>`
+
+</center>
+
+<div class="alert alert-info">
+
+Faire des boites avec `<div class="alert alert-info">`. `info` *(bleu)* est remplacable par `success` *(vert)*, `alert`, *(rouge)*, et peut-être d'autres, mais ca fonctionne rarement.
+
+</div>
+
+<span style="color:green">
+
+Changer de couleur avec `<span style="color:green">`, la couleur étant changeable, à tester.
+
+</span>
+
+Notez que vous ne voyez pas nécessairement le résultat ici, en fonction du moteur.
+
 ## Formules MathJax/Ketex
 
 [Ce fil stack exchange](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 contient le plus gros de Mathjax.
 
+- $\propto$: `\propto`, proportionnel
 # Environnement VsCode
 
 # Git/GitHub
