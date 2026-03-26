@@ -1,5 +1,22 @@
 > Ce fichier contiendra des formules diverses, si je ressens le besoin de les numériser.
 
+# Sommes
+
+$$
+\sum_{n=0}^{+\infin} q^n = \frac{1}{1-q^n}\,, \quad |q|<1
+$$
+
+On peut obtenir des variantes par dérivée.
+
+# Transformées
+## Continues
+## Discrètes
+### TFD (Transformée de Fourier Discrètes)
+
+$$
+x[n]\rightleftharpoons X[k]:= \sum_{n=0}^{N-1}x[n]e^{-j2\pi k\frac{n}{N}} \qquadk\in [0,N-1]\in \mathbb{N}
+$$
+
 # Opérations vectorielles
 > Le produit scalaire( $.$) et vectoriel ($\wedge$) sont considérés comme acquis.
 
