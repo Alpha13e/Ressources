@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bases du C++ — Résumé</title>
+  <style>
+    :root{
+      --bg:#0f172a;--panel:#0b1220;--card:#111827;--muted:#94a3b8;--text:#e5e7eb;
+      --accent:#22d3ee;--accent-2:#a78bfa;--ok:#34d399;--warn:#f59e0b;--bad:#f87171;
+      --code:#0b1020;--border: rgba(148,163,184,.2);
+    }
+    html,body{height:100%}
+    body{
+      margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
+      background:radial-gradient(1200px 800px at 20% -10%, rgba(167,139,250,.15), transparent),
+                 radial-gradient(900px 700px at 120% 20%, rgba(34,211,238,.12), transparent),
+                 var(--bg);
+      color:var(--text);line-height:1.6;
+    }
+    .container{max-width:1024px;margin:0 auto;padding:32px 20px 80px}
+    h1{font-size:clamp(28px, 4vw, 40px);font-weight:800;margin-bottom:10px}
+    h2{font-size:24px;margin-top:24px;color:var(--accent)}
+    pre{background:var(--code);border:1px solid var(--border);border-radius:10px;padding:10px;overflow:auto}
+    code{font-family:ui-monospace,monospace;background:var(--code);color:#d1d5db;padding:.2em .4em;border-radius:6px}
+    ul{margin-left:20px}
+    table{width:100%;border-collapse:collapse;border:1px solid var(--border)}
+    th,td{padding:8px 10px;border:1px solid var(--border);text-align:left}
+    th{background:rgba(167,139,250,.1)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bases du C++ — Résumé complet</h1>
+    <p>Résumé synthétique des notions principales du langage C++.</p>
+    <h2>1) Structure d’un programme C++</h2>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class MaClass { };
+
+int main() { return 0; }</code></pre>
+    <ul><li><code>#include &lt;iostream&gt;</code> : inclut les E/S standard.</li><li><code>using namespace std;</code> : permet d’utiliser <code>cout</code>, <code>cin</code> sans préfixe.</li></ul>
+    <h2>2) Entrées / Sorties</h2>
+    <pre><code>long a;
+cout &lt;&lt; "Saisir a : ";
+cin &gt;&gt; a;
+cout &lt;&lt; a &lt;&lt; " au carré = " &lt;&lt; a*a &lt;&lt; endl;</code></pre>
+    <p><code>cin</code>, <code>cout</code>, <code>cerr</code> sont les flux standards d’E/S.</p>
+    <h2>3) Variables et portée</h2>
+    <pre><code>for (int i = 0; i &lt; n; i++) {
+  double val;
+}</code></pre>
+    <p>Les variables existent uniquement dans leur bloc de définition.</p>
+    <h2>4) Références &amp; passage de paramètres</h2>
+    <pre><code>int x = 5;
+int &amp;r = x;
+
+void swap(int &amp;a, int &amp;b) {
+  int tmp = a; a = b; b = tmp;
+}</code></pre>
+    <p>Les références sont des alias de variables et permettent le passage par référence.</p>
+    <h2>5) Arguments par défaut</h2>
+    <pre><code>void f(int a, int b = 0, int c = 1);</code></pre>
+    <ul><li>Les valeurs par défaut doivent être à la fin.</li><li>Seulement dans le prototype.</li></ul>
+    <h2>6) Surcharge de fonctions</h2>
+    <pre><code>void g(int,int);
+void g(double,int);</code></pre>
+    <p>Le compilateur différencie selon la signature (types des paramètres).</p>
+    <h2>7) Fonctions inline</h2>
+    <pre><code>inline long carre(long x){ return x*x; }</code></pre>
+    <p>Remplace l’appel par le code pour gagner du temps d’exécution.</p>
+    <h2>8) Allocation dynamique</h2>
+    <pre><code>double *p = new double;
+delete p;
+
+int *t = new int[10];
+delete[] t;</code></pre>
+    <h2>9) Classes</h2>
+    <pre><code>class Complexe {
+public:
+  double re, im;
+  void afficher(){ cout &lt;&lt; re &lt;&lt; " + i" &lt;&lt; im &lt;&lt; endl; }
+};</code></pre>
+    <h2>10) Constructeurs</h2>
+    <pre><code>class Complexe {
+public:
+  double re, im;
+  Complexe(){ re=0; im=0; }
+  Complexe(double r,double i){ re=r; im=i; }
+};</code></pre>
+    <h2>11) Destructeurs</h2>
+    <pre><code>class Signal {
+  double *data;
+public:
+  Signal(int n){ data = new double[n]; }
+  ~Signal(){ delete[] data; }
+};</code></pre>
+    <h2>12) Encapsulation</h2>
+    <pre><code>class Complexe {
+private:
+  double re, im;
+public:
+  double getRe(){return re;}
+  void setRe(double r){re=r;}
+};</code></pre>
+    <h2>13) Surcharge d’opérateurs</h2>
+    <pre><code>Complexe operator+(const Complexe &a, const Complexe &b){
+  return Complexe(a.getRe()+b.getRe(), a.getIm()+b.getIm());
+}
+
+bool operator==(const Complexe &a, const Complexe &b){
+  return a.getRe()==b.getRe() &amp;&amp; a.getIm()==b.getIm();
+}</code></pre>
+    <h2>14) Synthèse</h2>
+    <table>
+      <tr><th>Notion</th><th>À retenir</th></tr>
+      <tr><td>Entrées/Sorties</td><td>Flux cin, cout, cerr</td></tr>
+      <tr><td>Références</td><td>Alias pour passage de paramètres</td></tr>
+      <tr><td>Arguments par défaut</td><td>Fin de liste, prototype seulement</td></tr>
+      <tr><td>Surcharge de fonctions</td><td>Basée sur les types des arguments</td></tr>
+      <tr><td>Inline</td><td>Remplace appel par le code</td></tr>
+      <tr><td>new/delete</td><td>Gestion dynamique de la mémoire</td></tr>
+      <tr><td>Classes</td><td>Attributs + méthodes</td></tr>
+      <tr><td>Constructeurs</td><td>Initialisent les objets</td></tr>
+      <tr><td>Destructeurs</td><td>Libèrent la mémoire</td></tr>
+      <tr><td>Encapsulation</td><td>Masque les données internes</td></tr>
+      <tr><td>Surcharge d’opérateurs</td><td>+,-,== utilisables sur les objets</td></tr>
+    </table>
+  </div>
+</body>
+</html>

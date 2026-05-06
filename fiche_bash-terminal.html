@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fiche d’utilisation du Terminal – Mac (Puce M3)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --accent: #22d3ee;
+      --accent-2: #34d399;
+      --border: #1f2937;
+      --code-bg: #0b1222;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      background: radial-gradient(1200px 800px at 20% 0%, #0b1229 0%, var(--bg) 60%), linear-gradient(180deg, #0a0f1f, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 64px;
+    }
+    header {
+      padding: 48px 24px 12px;
+      text-align: center;
+    }
+    h1 {
+      font-size: clamp(26px, 4vw, 40px);
+      margin: 0 0 8px;
+      letter-spacing: .3px;
+    }
+    .subtitle {
+      margin: 0 auto;
+      color: var(--muted);
+      max-width: 900px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 24px auto 0;
+      padding: 0 16px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    .card h2, .card h3 {
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 12px;
+      color: #0b0c10;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      padding: 2px 8px;
+      border-radius: 999px;
+      letter-spacing: .2px;
+      font-weight: 700;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    @media (min-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin: 4px 0 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      vertical-align: top;
+      border-top: 1px solid var(--border);
+    }
+    thead th {
+      color: #cbd5e1;
+      font-weight: 600;
+      background: #0e1726;
+      border-top: none;
+    }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      background: #0b1222;
+      border: 1px solid #1e293b;
+      padding: 2px 6px;
+      border-radius: 8px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+      white-space: nowrap;
+      display: inline-block;
+      margin: 0 2px 2px 0;
+      color: var(--accent-2);
+    }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      overflow: auto;
+      margin: 10px 0 14px;
+    }
+    .tip {
+      border-left: 3px solid var(--accent);
+      background: rgba(34,211,238,0.06);
+      color: #cffafe;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+    footer {
+      max-width: 1000px;
+      margin: 24px auto 0;
+      padding: 0 16px;
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+    /* Reset legacy inlined styles from original docs to avoid conflicts */
+    body .legacy-reset * {
+      all: unset;
+      display: revert;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💻 Fiche d’utilisation du Terminal – Mac (Puce M3)</h1>
+</header>
+
+  <div class="container">
+    <div class="grid">
+      <article class="card">
+<!-- Insert the original document content, lightly sanitized -->
+        <div class="content">
+<div class="container">
+    
+
+    <section>
+      <h2><span class="tag">1</span> Ouvrir le Terminal</h2>
+      <ul>
+        <li><strong>Méthode 1 :</strong> Finder → Applications → Utilitaires → Terminal</li>
+        <li><strong>Méthode 2 :</strong> <kbd>⌘</kbd> + <kbd>Espace</kbd> → taper <strong>Terminal</strong> → Entrée</li>
+      </ul>
+      <p class="muted">Le Terminal permet d’interagir avec ton Mac via des commandes texte.</p>
+    </section>
+
+    <section>
+      <h2><span class="tag">2</span> Structure d’une commande</h2>
+      <pre><code>commande [options] [arguments]</code></pre>
+      <p><strong>Exemple :</strong></p>
+      <pre><code class="language-bash">ls -l /Users</code></pre>
+      <ul>
+        <li><code class="inline">ls</code> → liste les fichiers</li>
+        <li><code class="inline">-l</code> → affiche en liste détaillée</li>
+        <li><code class="inline">/Users</code> → indique le dossier à lister</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="tag">3</span> Commandes de base</h2>
+      <table>
+        <thead><tr><th>Commande</th><th>Description</th><th>Exemple</th></tr></thead>
+        <tbody>
+          <tr><td><code class="inline">pwd</code></td><td>Affiche le chemin du dossier actuel</td><td><code class="inline">pwd</code></td></tr>
+          <tr><td><code class="inline">ls</code></td><td>Liste les fichiers et dossiers</td><td><code class="inline">ls -a</code> (tout afficher)</td></tr>
+          <tr><td><code class="inline">cd</code></td><td>Change de dossier</td><td><code class="inline">cd Documents</code></td></tr>
+          <tr><td><code class="inline">mkdir</code></td><td>Crée un dossier</td><td><code class="inline">mkdir test</code></td></tr>
+          <tr><td><code class="inline">touch</code></td><td>Crée un fichier vide</td><td><code class="inline">touch notes.txt</code></td></tr>
+          <tr><td><code class="inline">cp</code></td><td>Copie un fichier ou dossier</td><td><code class="inline">cp notes.txt copie.txt</code></td></tr>
+          <tr><td><code class="inline">mv</code></td><td>Déplace ou renomme</td><td><code class="inline">mv notes.txt dossier/</code></td></tr>
+          <tr><td><code class="inline">rm</code></td><td>Supprime un fichier</td><td><code class="inline">rm fichier.txt</code></td></tr>
+          <tr><td><code class="inline">rmdir</code></td><td>Supprime un dossier vide</td><td><code class="inline">rmdir dossier</code></td></tr>
+          <tr><td><code class="inline">open</code></td><td>Ouvre un fichier/dossier avec le Finder</td><td><code class="inline">open .</code></td></tr>
+          <tr><td><code class="inline">clear</code></td><td>Efface l’affichage du Terminal</td><td><code class="inline">clear</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="tag">4</span> Commandes système utiles</h2>
+      <table>
+        <thead><tr><th>Commande</th><th>Fonction</th></tr></thead>
+        <tbody>
+          <tr><td><code class="inline">whoami</code></td><td>Affiche ton nom d’utilisateur</td></tr>
+          <tr><td><code class="inline">top</code></td><td>Montre les processus actifs</td></tr>
+          <tr><td><code class="inline">ps aux</code></td><td>Liste tous les processus</td></tr>
+          <tr><td><code class="inline">kill [PID]</code></td><td>Termine un processus</td></tr>
+          <tr><td><code class="inline">sudo [commande]</code></td><td>Exécute une commande en mode administrateur</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="tag">5</span> Navigation rapide</h2>
+      <ul>
+        <li><code class="inline">cd ..</code> → remonter d’un dossier</li>
+        <li><code class="inline">cd ~</code> → aller au dossier personnel</li>
+        <li><code class="inline">cd /</code> → aller à la racine du système</li>
+        <li><kbd>Tab</kbd> → compléter automatiquement un nom</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="tag">6</span> Manipulation de fichiers texte</h2>
+      <table>
+        <thead><tr><th>Commande</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code class="inline">cat fichier.txt</code></td><td>Affiche le contenu</td></tr>
+          <tr><td><code class="inline">nano fichier.txt</code></td><td>Édite le fichier dans l’éditeur intégré</td></tr>
+          <tr><td><code class="inline">grep "mot" fichier.txt</code></td><td>Recherche un mot dans un fichier</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="tag">7</span> Mises à jour et paquets (Homebrew)</h2>
+      <p>Sur Mac M3, installe <strong>Homebrew</strong>, un gestionnaire de paquets.</p>
+      <p><strong>Installation :</strong></p>
+      <pre><code class="language-bash">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+      <p><strong>Exemples d’usage :</strong></p>
+      <pre><code class="language-bash">brew install python
+brew install git
+brew update && brew upgrade</code></pre>
+    </section>
+
+    <section>
+      <h2><span class="tag">8</span> Raccourcis utiles</h2>
+      <table>
+        <thead><tr><th>Raccourci</th><th>Fonction</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>Ctrl</kbd> + <kbd>C</kbd></td><td>Interrompt une commande en cours</td></tr>
+          <tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>Parcourt l’historique des commandes</td></tr>
+          <tr><td><kbd>⌘</kbd> + <kbd>K</kbd></td><td>Efface l’écran du Terminal</td></tr>
+          <tr><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td><td>Ferme la session du Terminal</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="tag">9</span> Personnalisation (zsh)</h2>
+      <p>Le Terminal macOS utilise <strong>zsh</strong> par défaut. Personnalise l’invite et tes alias dans <code class="inline">~/.zshrc</code>.</p>
+      <pre><code># Ajouter une couleur à l'invite de commande
+export PS1="%F{green}%n@%m %F{blue}%~ %F{yellow}%# %f"
+
+# Ajouter des alias pratiques
+alias ll='ls -lAh'
+alias cls='clear'
+alias dev='cd ~/Documents/dev'</code></pre>
+      <p>Recharge le fichier :</p>
+      <pre><code class="language-bash">source ~/.zshrc</code></pre>
+    </section>
+
+    <section>
+      <h2><span class="tag">10</span> Commandes réseau utiles</h2>
+      <table>
+        <thead><tr><th>Commande</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code class="inline">ping site.com</code></td><td>Teste la connexion internet</td></tr>
+          <tr><td><code class="inline">ifconfig</code></td><td>Affiche les infos réseau</td></tr>
+          <tr><td><code class="inline">curl adresse</code></td><td>Télécharge une page web</td></tr>
+          <tr><td><code class="inline">ssh user@adresse</code></td><td>Connexion à un autre ordinateur</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="tag">11</span> Recherche & gestion</h2>
+      <table>
+        <thead><tr><th>Commande</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code class="inline">find / -name "fichier.txt"</code></td><td>Recherche un fichier dans tout le système</td></tr>
+          <tr><td><code class="inline">grep "mot" *</code></td><td>Recherche un mot dans les fichiers du dossier courant</td></tr>
+          <tr><td><code class="inline">history</code></td><td>Affiche les dernières commandes</td></tr>
+          <tr><td><code class="inline">du -h</code></td><td>Taille des fichiers/dossiers</td></tr>
+          <tr><td><code class="inline">df -h</code></td><td>Espace disque disponible</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="tag">12</span> Compression & archives</h2>
+      <table>
+        <thead><tr><th>Commande</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code class="inline">zip archive.zip fichier.txt</code></td><td>Crée une archive ZIP</td></tr>
+          <tr><td><code class="inline">unzip archive.zip</code></td><td>Décompresse un ZIP</td></tr>
+          <tr><td><code class="inline">tar -czf archive.tar.gz dossier/</code></td><td>Crée une archive TAR compressée</td></tr>
+          <tr><td><code class="inline">tar -xzf archive.tar.gz</code></td><td>Extrait une archive TAR</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="tag">13</span> Commandes avancées</h2>
+      <table>
+        <thead><tr><th>Commande</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code class="inline">chmod 755 fichier</code></td><td>Modifie les permissions</td></tr>
+          <tr><td><code class="inline">chown user fichier</code></td><td>Change le propriétaire</td></tr>
+          <tr><td><code class="inline">ln -s chemin cible</code></td><td>Crée un lien symbolique</td></tr>
+          <tr><td><code class="inline">echo "texte"</code></td><td>Affiche du texte</td></tr>
+          <tr><td><code class="inline">date</code></td><td>Affiche la date et l’heure</td></tr>
+          <tr><td><code class="inline">uptime</code></td><td>Temps depuis le dernier démarrage</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="tag">14</span> Astuces pratiques</h2>
+      <div class="tips">
+        <div class="callout">Tape <code class="inline">man [commande]</code> pour le manuel (ex : <code class="inline">man ls</code>).</div>
+        <div class="callout">Chaîne plusieurs commandes avec <code class="inline">&amp;&amp;</code> : <code class="inline">mkdir test &amp;&amp; cd test &amp;&amp; touch fichier.txt</code></div>
+        <div class="callout">Redirige la sortie : <code class="inline">ls &gt; liste.txt</code> (écrase) ou <code class="inline">ls &gt;&gt; liste.txt</code> (ajoute).</div>
+        <div class="callout">Exécute en arrière‑plan : <code class="inline">commande &amp;</code></div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="tag">15</span> Nettoyage & maintenance</h2>
+      <table>
+        <thead><tr><th>Commande</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code class="inline">brew cleanup</code></td><td>Supprime les anciens paquets Homebrew</td></tr>
+          <tr><td><code class="inline">sudo purge</code></td><td>Libère la mémoire inutilisée</td></tr>
+          <tr><td><code class="inline">rm -rf ~/.Trash/*</code></td><td>Vide la corbeille</td></tr>
+          <tr><td><code class="inline">diskutil list</code></td><td>Liste les disques et volumes</td></tr>
+          <tr><td><code class="inline">softwareupdate -l</code></td><td>Vérifie les mises à jour macOS disponibles</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="tag">16</span> Ressources utiles</h2>
+      <ul>
+        <li>Documentation Apple Terminal : <a href="https://support.apple.com/fr-fr/guide/terminal" target="_blank" rel="noopener">support.apple.com › guide › terminal</a></li>
+        <li>Référence des commandes UNIX : <code class="inline">man intro</code></li>
+        <li>Homebrew : <a href="https://brew.sh/" target="_blank" rel="noopener">brew.sh</a></li>
+      </ul>
+    </section>
+
+    
+  </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <footer>
+    Mis à jour le 19 October 2025 — Thème : fond sombre + accents. Fait avec ❤️
+  </footer>
+</body>
+</html>
