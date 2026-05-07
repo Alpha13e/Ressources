@@ -1,5 +1,17 @@
 > Ce fichier contiendra des formules diverses, si je ressens le besoin de les numériser.
 
+# Valeurs diverses
+
+$$
+\begin{aligned}
+    e^1&\approx 2.718 &\textnormal{Exponentielle}\\
+    c&\approx 3.10^8\, m/s &\textnormal{Vitesse de la lumière dans le vide}\\
+    \varepsilon_0&=9.10^{-12}\, SI &\textnormal{Permittivité diéléctrique du vide}\\
+    \mu_0&=4\pi.10^{-7}\, SI &\textnormal{Perméabilité magnétique du vide}\\
+    \pi & \approx 3.14 &180 \textnormal{ degrés}
+\end{aligned}
+$$
+
 # Sommes
 
 $$
